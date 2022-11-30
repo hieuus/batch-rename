@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchRename", "BatchRename\BatchRename.csproj", "{C05784A8-FE65-4FEF-A7CA-98D7774FD94C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C05784A8-FE65-4FEF-A7CA-98D7774FD94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05784A8-FE65-4FEF-A7CA-98D7774FD94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05784A8-FE65-4FEF-A7CA-98D7774FD94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05784A8-FE65-4FEF-A7CA-98D7774FD94C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF45730D-EE09-4F09-94AB-9A1F5EF1E09E}
+	EndGlobalSection
+EndGlobal
