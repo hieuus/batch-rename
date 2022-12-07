@@ -660,7 +660,7 @@
                                         FontSize="15"
                                         Background="{DynamicResource PrimaryGrayColor}" Foreground="White"                                
                                         HorizontalAlignment="Center" VerticalAlignment="Center"
-                                        Padding="10,5,10,5">
+                                        Padding="10,5,10,5" Click="saveToChooseLocation_Click">
                             <Button.Content>
                                 <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
                                     <TextBlock FontFamily="Poppins" Text="..."/>
