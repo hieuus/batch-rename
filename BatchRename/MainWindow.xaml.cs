@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Data;
+using Path = System.IO.Path;
 
 namespace BatchRename
 {
@@ -20,6 +24,8 @@ namespace BatchRename
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DataTable DataTable { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -212,6 +218,38 @@ namespace BatchRename
             else convertPascalCase.IsChecked = true;
         }
 
-        
+        private void saveToChooseLocation_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            DataTable dataTable = new DataTable(); 
+            dataTable.Columns.Add("STT");
+            dataTable.Columns.Add("File Name");
+            dataTable.Columns.Add("New Name");
+
+            var num = 0;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                foreach (string filename in openFileDialog.FileNames)
+                {
+                    num++;
+
+                    FileInfo file = new FileInfo(filename);
+
+                    dataTable.Rows.Add(num, file.Name);
+                    
+
+                }
+            }
+            dataGridRename.ItemsSource = dataTable.DefaultView;
+
+
+        }
+
+       
     }
 }

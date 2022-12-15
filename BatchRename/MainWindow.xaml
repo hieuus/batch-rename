@@ -661,7 +661,7 @@
                                         FontSize="15"
                                         Background="{DynamicResource PrimaryGrayColor}" Foreground="White"                                
                                         HorizontalAlignment="Center" VerticalAlignment="Center"
-                                        Padding="10,5,10,5">
+                                        Padding="10,5,10,5" Click="saveToChooseLocation_Click">
                             <Button.Content>
                                 <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
                                     <TextBlock FontFamily="Poppins" Text="..."/>
@@ -676,9 +676,9 @@
                     <DataGrid x:Name="dataGridRename"
                               Height="600" BorderThickness="0" ScrollViewer.CanContentScroll="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="No" FontSize="15" FontFamily="Poppins" FontWeight="Bold" Width="50"></DataGridTextColumn>
-                            <DataGridTextColumn Header="File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>
-                            <DataGridTextColumn Header="New File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>
+                            <!--<DataGridTextColumn Header="No" FontSize="15" FontFamily="Poppins" FontWeight="Bold" Width="50"></DataGridTextColumn>
+                            <DataGridTextColumn Header="File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>-->
+                            <!--<DataGridTextColumn Header="New File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>-->
                         </DataGrid.Columns>
                         
                     </DataGrid>
