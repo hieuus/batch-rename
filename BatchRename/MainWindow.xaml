@@ -675,9 +675,9 @@
                     <DataGrid x:Name="dataGridRename"
                               Height="600" BorderThickness="0" ScrollViewer.CanContentScroll="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="No" FontSize="15" FontFamily="Poppins" FontWeight="Bold" Width="50"></DataGridTextColumn>
-                            <DataGridTextColumn Header="File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>
-                            <DataGridTextColumn Header="New File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>
+                            <!--<DataGridTextColumn Header="No" FontSize="15" FontFamily="Poppins" FontWeight="Bold" Width="50"></DataGridTextColumn>
+                            <DataGridTextColumn Header="File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>-->
+                            <!--<DataGridTextColumn Header="New File Name" FontSize="15" FontFamily="Poppins" FontWeight="Bold"  Width="*"></DataGridTextColumn>-->
                         </DataGrid.Columns>
                         
                     </DataGrid>

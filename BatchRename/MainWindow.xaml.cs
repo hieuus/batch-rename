@@ -225,16 +225,27 @@ namespace BatchRename
             openFileDialog.Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt";
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
+            DataTable dataTable = new DataTable(); 
+            dataTable.Columns.Add("STT");
+            dataTable.Columns.Add("File Name");
+            dataTable.Columns.Add("New Name");
+
+            var num = 0;
 
             if (openFileDialog.ShowDialog() == true)
             {
                 foreach (string filename in openFileDialog.FileNames)
                 {
+                    num++;
+
                     FileInfo file = new FileInfo(filename);
-                    dataGridRename.Items.Add(file.Name);
+
+                    dataTable.Rows.Add(num, file.Name);
                     
+
                 }
             }
+            dataGridRename.ItemsSource = dataTable.DefaultView;
 
 
         }
