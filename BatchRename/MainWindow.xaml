@@ -625,6 +625,7 @@
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
                     <!--Choose-->
                     <Button x:Name="chooseButton"
+                            Click="chooseFileFolderButton_Click"
                                         Style="{DynamicResource RoundedButtonStyle}"
                                         Width="140"
                                         Background="{DynamicResource PrimaryBlueColor}" Foreground="White"                                

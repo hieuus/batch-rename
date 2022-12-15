@@ -218,14 +218,15 @@ namespace BatchRename
             else convertPascalCase.IsChecked = true;
         }
 
-        private void saveToChooseLocation_Click(object sender, RoutedEventArgs e)
+        private void chooseFileFolderButton_Click(object sender, RoutedEventArgs e)
         {
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
             openFileDialog.Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt";
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            DataTable dataTable = new DataTable(); 
+            DataTable dataTable = new DataTable();
             dataTable.Columns.Add("STT");
             dataTable.Columns.Add("File Name");
             dataTable.Columns.Add("New Name");
@@ -241,15 +242,19 @@ namespace BatchRename
                     FileInfo file = new FileInfo(filename);
 
                     dataTable.Rows.Add(num, file.Name);
-                    
+
 
                 }
             }
             dataGridRename.ItemsSource = dataTable.DefaultView;
 
+        }
+
+        private void saveToChooseLocation_Click(object sender, RoutedEventArgs e)
+        {
+           
 
         }
 
-       
     }
 }
