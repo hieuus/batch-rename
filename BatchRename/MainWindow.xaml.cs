@@ -228,7 +228,7 @@ namespace BatchRename
             DataTable dataTable = new DataTable(); 
             dataTable.Columns.Add("STT");
             dataTable.Columns.Add("File Name");
-            dataTable.Columns.Add("New Name");
+            //dataTable.Columns.Add("New Name");
 
             var num = 0;
 
@@ -241,8 +241,6 @@ namespace BatchRename
                     FileInfo file = new FileInfo(filename);
 
                     dataTable.Rows.Add(num, file.Name);
-                    
-
                 }
             }
             dataGridRename.ItemsSource = dataTable.DefaultView;
